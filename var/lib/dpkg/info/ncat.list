@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/bin
+/usr/bin/ncat
+/usr/share
+/usr/share/doc
+/usr/share/doc/ncat
+/usr/share/doc/ncat/changelog.Debian.gz
+/usr/share/doc/ncat/changelog.gz
+/usr/share/doc/ncat/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/ncat.1.gz

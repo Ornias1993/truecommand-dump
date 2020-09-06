@@ -1,0 +1,4 @@
+{
+  "install_dir" : "/var/ix-alertme/plugins",
+  "repos" : [ { "name":"disabled" } ]
+}

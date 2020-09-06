@@ -1,0 +1,35 @@
+#!/bin/bash
+#Quick script to provide the ability for a password reset for UI users
+# Get the database username for access
+pguser="postgres"
+
+TV_USER="${1}"
+if [ -z "${TV_USER}" ] ; then
+  echo "Usage: \"resetpw [username]\""
+  echo "  This will reset that TrueCommand UI user's password to a random string and return the new password. This will NOT impact the user's password if LDAP user authentication is enabled."
+  echo "  Example:     resetpw myuser"
+  exit 1
+fi
+
+# - scan the database for the ID
+echo "SELECT uuid from tv.users WHERE uname='${TV_USER}';" > "/tmp/.tmp-2315t7u"
+uuid=$(psql -U "${pguser}" -h 127.0.0.1 -d ixdb -tAq -f "/tmp/.tmp-2315t7u")
+rm "/tmp/.tmp-2315t7u"
+if [ -z "${uuid}" ] ; then
+  echo "User ${TV_USER} does not exist!"
+  exit 1
+fi
+
+#  - save a random temporary password
+TV_PASS=$(shuf -i 100000-999999 -n 1)
+# - assemble temporary override file 
+tmpdir="/var/tmp/.dbus-junk"
+if [ ! -d "${tmpdir}" ] ; then
+  mkdir -p "${tmpdir}"
+fi
+echo ${TV_PASS} > "${tmpdir}/${uuid}"
+echo "Password reset complete:"
+echo "    username: ${TV_USER}"
+echo "    password: ${TV_PASS}"
+echo " This password will be deactivated in 6 hours. Please login and change the password as soon as possible."
+exit 0

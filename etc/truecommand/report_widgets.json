@@ -1,0 +1,385 @@
+{
+  "chart_line" : {
+    "id" : "chart_line",
+    "internal_type" : "chart:line",
+    "custom_settings" : true,
+    "name" : "Custom Line Chart",
+    "summary" : "Add a chart of data points",
+    "preview_image" : "chart-line",
+    "data_paths" : [],
+    "data_types" : ["number"],
+    "data" : null,
+    "api" : [
+      { "fieldname" : "title", "summary" : "Title for the chart", "value" : { "type" : "string" } },
+      { "fieldname" : "subtitle", "summary" : "Subtitle for the chart", "value" : { "type" : "string" } },
+      { "fieldname" : "axis_label", "summary" : "Label for the Y axis", "value" : { "type" : "string" } },
+      { "fieldname" : "point_size", "summary" : "Radius of data points", "value" : { "type" : "integer", "default" : 3, "min" : 0, "max" : 512 } },
+      { "fieldname" : "line_size", "summary" : "Width of the line", "value" : { "type" : "integer", "default" : 2, "min" : 1, "max" : 512 } },
+      { "fieldname" : "y_min", "summary" : "Minimum Y-axis value", "value" : { "type" : "float" } },
+      { "fieldname" : "y_max", "summary" : "Maximum Y-axis value", "value" : { "type" : "float" } }
+    ],
+    "settings" : {}
+  },
+  "chart_area" : {
+    "id" : "chart_area",
+    "internal_type" : "chart:area",
+    "custom_settings" : true,
+    "name" : "Custom Area Chart",
+    "summary" : "Add a chart of data points with filled-in area",
+    "preview_image" : "chart-areaspline-variant",
+    "data_paths" : [],
+    "data_types" : ["number"],
+    "data" : null,
+    "api" : [
+      { "fieldname" : "title", "summary" : "Title for the chart", "value" : { "type" : "string" } },
+      { "fieldname" : "subtitle", "summary" : "Subtitle for the chart", "value" : { "type" : "string" } },
+      { "fieldname" : "axis_label", "summary" : "Label for the Y axis", "value" : { "type" : "string" } },
+      { "fieldname" : "point_size", "summary" : "Radius of data points", "value" : { "type" : "integer", "default" : 3, "min" : 0, "max" : 512 } },
+      { "fieldname" : "line_size", "summary" : "Width of the line", "value" : { "type" : "integer", "default" : 2, "min" : 1, "max" : 512 } },
+      { "fieldname" : "y_min", "summary" : "Minimum Y-axis value", "value" : { "type" : "float" } },
+      { "fieldname" : "y_max", "summary" : "Maximum Y-axis value", "value" : { "type" : "float" } },
+      { "fieldname" : "stacked", "summary" : "Stack the values", "value" : { "type" : "bool", "default" : false } }
+    ],
+    "settings" : {}
+  },
+  "chart_bar" : {
+    "id" : "chart_bar",
+    "internal_type" : "chart:bar",
+    "custom_settings" : true,
+    "name" : "Custom Bar Chart",
+    "summary" : "Add a stacked vertical bar chart of data points",
+    "preview_image" : "chart-bar-stacked",
+    "data_paths" : [],
+    "data_types" : ["number"],
+    "data" : null,
+    "api" : [
+      { "fieldname" : "title", "summary" : "Title for the chart", "value" : { "type" : "string" } },
+      { "fieldname" : "subtitle", "summary" : "Subtitle for the chart", "value" : { "type" : "string" } },
+      { "fieldname" : "axis_label", "summary" : "Label for the Y axis", "value" : { "type" : "string" } },
+      { "fieldname" : "line_size", "summary" : "Width of the line", "value" : { "type" : "integer", "default" : 2, "min" : 1, "max" : 512 } },
+      { "fieldname" : "y_min", "summary" : "Minimum Y-axis value", "value" : { "type" : "float" } },
+      { "fieldname" : "y_max", "summary" : "Maximum Y-axis value", "value" : { "type" : "float" } },
+      { "fieldname" : "stacked", "summary" : "Stack the values", "value" : { "type" : "bool", "default" : false } }
+    ],
+    "settings" : {}
+  },
+  "network_chart" : {
+    "id" : "network_chart",
+    "internal_type" : "chart:line",
+    "custom_settings" : false,
+    "name" : "Network Traffic Chart",
+    "summary" : "Chart of network traffic",
+    "preview_image" : "chart-line",
+    "data_paths" : [
+      {"path" : "network%total%KB/s in", "legend" : "Total Download" },
+      {"path" : "network%total%KB/s out", "legend" : "Total Upload" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "Network Traffic",
+      "axis_label" : "KB/s",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0
+    }
+  },
+  "disk_latency_read_chart" : {
+    "id" : "disk_latency_read_chart",
+    "internal_type" : "chart:line",
+    "custom_settings" : false,
+    "name" : "Disk Latency Chart (Reads)",
+    "summary" : "Show read latency times for all disks",
+    "preview_image" : "chart-line",
+    "data_paths" : [
+      {"path" : "disks%*%ms/r", "legend_path" : "disks%*%Name" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "Disk Latency (Read)",
+      "axis_label" : "Milliseconds per Read",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0
+    }
+  },
+  "disk_latency_write_chart" : {
+    "id" : "disk_latency_write_chart",
+    "internal_type" : "chart:line",
+    "custom_settings" : false,
+    "name" : "Disk Latency Chart (Writes)",
+    "summary" : "Show write latency times for all disks",
+    "preview_image" : "chart-line",
+    "data_paths" : [
+      {"path" : "disks%*%ms/w", "legend_path" : "disks%*%Name" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "Disk Latency (Write)",
+      "axis_label" : "Milliseconds per Write",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0
+    }
+  },
+  "disk_activity_chart" : {
+    "id" : "disk_activity_chart",
+    "internal_type" : "chart:line",
+    "custom_settings" : false,
+    "name" : "Disk Activity Chart",
+    "summary" : "Show individual disk activity as a percentage of capabilities.",
+    "preview_image" : "chart-line",
+    "data_paths" : [
+      {"path" : "disks%*%busy_percent", "legend_path" : "disks%*%Name" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "Disk Activity",
+      "axis_label" : "% Busy",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0,
+      "y_max" : 100
+    }
+  },
+  "storage_pools_chart" : {
+    "id" : "storage_pools_chart",
+    "internal_type" : "chart:line",
+    "custom_settings" : false,
+    "name" : "Storage Pool Utilization Chart",
+    "summary" : "Track storage used per-pool over time",
+    "preview_image" : "chart-line",
+    "data_paths" : [
+      {"path" : "storage%pools%*%data_size_used_percent", "legend_path" : "storage%pools%*%name" }
+    ],
+    "data" : null,
+    "data_types" : [],
+    "api" : [],
+    "settings" : {
+      "title" : "Storage Data by Pool",
+      "axis_label" : "% Used",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0,
+      "y_max" : 100
+    }
+  },
+  "storage_chart" : {
+    "id" : "storage_chart",
+    "internal_type" : "chart:area",
+    "custom_settings" : false,
+    "name" : "Storage Utilization Chart",
+    "summary" : "Track storage used over time",
+    "preview_image" : "chart-areaspline-variant",
+    "data_paths" : [
+      {"path" : "storage%total_size_used_percent", "legend" : "Storage % Used" }
+    ],
+    "data" : null,
+    "data_types" : [],
+    "api" : [],
+    "settings" : {
+      "title" : "Storage Percent Used",
+      "axis_label" : "% Used",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0,
+      "y_max" : 100
+    }
+  },
+  "network_upload_chart" : {
+    "id" : "network_upload_chart",
+    "internal_type" : "chart:line",
+    "custom_settings" : false,
+    "name" : "Network Device Chart (Upload)",
+    "summary" : "Monitor network traffic per adapter",
+    "preview_image" : "chart-line",
+    "data_paths" : [
+      {"path" : "network%*%KB/s out", "legend_path" : "network%*" }
+    ],
+    "data" : null,
+    "data_types" : [],
+    "api" : [],
+    "settings" : {
+      "title" : "Network Traffic per Device (Upload)",
+      "axis_label" : "KB/s Out",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0
+    }
+  },
+  "network_download_chart" : {
+    "id" : "network_download_chart",
+    "internal_type" : "chart:line",
+    "custom_settings" : false,
+    "name" : "Network Device Chart (Download)",
+    "summary" : "Monitor network traffic per adapter",
+    "preview_image" : "chart-line",
+    "data_paths" : [
+      {"path" : "network%*%KB/s in", "legend_path" : "network%*" }
+    ],
+    "data" : null,
+    "data_types" : [],
+    "api" : [],
+    "settings" : {
+      "title" : "Network Traffic per Device (Download)",
+      "axis_label" : "KB/s In",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0
+    }
+  },
+  "cpu_temperature_bar" : {
+    "id" : "cpu_temperature_bar",
+    "internal_type" : "chart:bar",
+    "custom_settings" : false,
+    "name" : "Average CPU Temperatures (Bar Chart)",
+    "summary" : "Show the average CPU temperature for the system",
+    "preview_image" : "chart-bar",
+    "data_paths" : [
+      {"path" : "cpu_temp%average", "legend" : "Average Temperature" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "CPU Temperatures",
+      "axis_label" : "Degrees Celsius",
+      "line_size" : 5,
+      "y_min" : 0
+    }
+  },
+  "memory_percent_bar" : {
+    "id" : "memory_percent_bar",
+    "internal_type" : "chart:bar",
+    "custom_settings" : false,
+    "name" : "Memory Utilization Percent (Bar Chart)",
+    "summary" : "Show memory breakdown of system as a function of time. Stacked bar-chart version.",
+    "preview_image" : "chart-bar-stacked",
+    "data_paths" : [
+      {"path" : "memory%active_percent", "legend" : "Active" },
+      {"path" : "memory%free_percent", "legend" : "Free" },
+      {"path" : "memory%inactive_percent", "legend" : "Inactive" },
+      {"path" : "memory%laundry_percent", "legend" : "Laundry" },
+      {"path" : "memory%wired_percent", "legend" : "Wired (Cache)" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "Memory Utilization",
+      "axis_label" : "% Total",
+      "line_size" : 5,
+      "y_min" : 0,
+      "y_max" : 100,
+      "stacked" : true
+    }
+  },
+  "memory_percent_area" : {
+    "id" : "memory_percent_area",
+    "internal_type" : "chart:area",
+    "custom_settings" : false,
+    "name" : "Memory Utilization Percent (Area Chart)",
+    "summary" : "Show memory breakdown of system as a function of time. Stacked area-chart version.",
+    "preview_image" : "chart-areaspline-variant",
+    "data_paths" : [
+      {"path" : "memory%active_percent", "legend" : "Active" },
+      {"path" : "memory%free_percent", "legend" : "Free" },
+      {"path" : "memory%inactive_percent", "legend" : "Inactive" },
+      {"path" : "memory%laundry_percent", "legend" : "Laundry" },
+      {"path" : "memory%wired_percent", "legend" : "Wired (Cache)" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "Memory Utilization",
+      "axis_label" : "% Total",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0,
+      "y_max" : 100,
+      "stacked" : true
+    }
+  },
+  "cpu_percent_area" : {
+    "id" : "cpu_percent_area",
+    "internal_type" : "chart:area",
+    "custom_settings" : false,
+    "name" : "CPU Utilization Percent (Area Chart)",
+    "summary" : "Show CPU utilization as a function of time. Stacked area-chart version.",
+    "preview_image" : "chart-areaspline-variant",
+    "data_paths" : [
+      {"path" : "cpu%total%idle", "legend" : "Idle" },
+      {"path" : "cpu%total%system", "legend" : "System" },
+      {"path" : "cpu%total%user", "legend" : "User" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "CPU Utilization",
+      "axis_label" : "% Total",
+      "point_size" : 1,
+      "line_size" : 3,
+      "y_min" : 0,
+      "y_max" : 100,
+      "stacked" : true
+    }
+  },
+  "memory_bytes_bar" : {
+    "id" : "memory_bytes_bar",
+    "internal_type" : "chart:bar",
+    "custom_settings" : false,
+    "name" : "Memory Utilization in Bytes (Bar Chart)",
+    "summary" : "Show memory breakdown of system as a function of time. Stacked bar-chart version.",
+    "preview_image" : "chart-bar-stacked",
+    "data_paths" : [
+      {"path" : "memory%active_bytes", "legend" : "Active" },
+      {"path" : "memory%free_bytes", "legend" : "Free" },
+      {"path" : "memory%inactive_bytes", "legend" : "Inactive" },
+      {"path" : "memory%laundry_bytes", "legend" : "Laundry" },
+      {"path" : "memory%wired_bytes", "legend" : "Wired (Cache)" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "Memory Utilization",
+      "axis_label" : "Bytes",
+      "y_min" : 0
+    }
+  },
+  "memory_bytes_line" : {
+    "id" : "memory_bytes_line",
+    "internal_type" : "chart:line",
+    "custom_settings" : false,
+    "name" : "Memory Utilization in Bytes (Line Chart)",
+    "summary" : "Show memory breakdown of system as a function of time. Line-chart version.",
+    "preview_image" : "chart-line",
+    "data_paths" : [
+      {"path" : "memory%active_bytes", "legend" : "Active" },
+      {"path" : "memory%free_bytes", "legend" : "Free" },
+      {"path" : "memory%inactive_bytes", "legend" : "Inactive" },
+      {"path" : "memory%laundry_bytes", "legend" : "Laundry" },
+      {"path" : "memory%wired_bytes", "legend" : "Wired (Cache)" }
+    ],
+    "data_types" : [],
+    "data" : null,
+    "api" : [],
+    "settings" : {
+      "title" : "Memory Utilization",
+      "point_size" : 1,
+      "line_size" : 3,
+      "axis_label" : "Bytes",
+      "y_min" : 0
+    }
+  }
+
+}

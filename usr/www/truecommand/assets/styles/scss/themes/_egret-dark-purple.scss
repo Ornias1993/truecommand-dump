@@ -1,0 +1,259 @@
+$mat-primary: (
+    50: #e1f5fe,
+    100: #b3e5fc,
+    200: #81d4fa,
+    300: #4fc3f7,
+    400: #29b6f6,
+    500: #008990,
+    600: #039be5,
+    700: #0288d1,
+    800: #0277bd,
+    900: #01579b,
+    A100: #80d8ff,
+    A200: #40c4ff,
+    A400: #00b0ff,
+    A700: #0091ea,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #ffffff
+    )
+);
+
+$mat-accent: (
+    50: #fff8e1,
+    100: #ffecb3,
+    200: #ffe082,
+    300: #ffd54f,
+    400: #ffca28,
+    500: #ffc107,
+    600: #ffb300,
+    700: #ffa000,
+    800: #ff8f00,
+    900: #ff6f00,
+    A100: #ffe57f,
+    A200: #ffd740,
+    A400: #ffc400,
+    A700: #ffab00,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #000000,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000
+    )
+);
+
+// mandatory stuff for theming
+$egret-primary: mat-palette($mat-primary);
+$egret-accent: mat-palette($mat-accent);
+
+// include the custom theme components into a theme object
+$egret-theme: mat-dark-theme($egret-primary, $egret-accent);
+
+// include the custom theme object into the angular material theme
+.egret-dark-purple {
+    @include angular-material-theme($egret-theme);
+
+    background: linear-gradient(135deg, $bg-dark-stronger -1%, map-get($mat-primary, 500) 100%) !important;
+
+    .bg-strong {
+        background: $bg-dark-strong !important;
+    }
+
+    .bg-stronger {
+        background: $bg-dark-stronger !important;
+    }
+
+    .bg-strongest {
+        background: $bg-dark-strongest !important;
+    }
+
+    .bg-contrast-lowest {
+        background: $font-color-dark-contrast-lowest;
+    }
+
+    .border-lightest {
+        border: 1px solid $font-color-dark-contrast-lowest;
+        border-radius: 2px;
+    }
+
+    .border-bottom-lightest {
+        border-bottom: 1px solid $font-color-dark-contrast-lowest;
+    }
+
+    .font-color-contrast-high {
+        color: $font-color-dark-contrast-high !important;
+    }
+
+    .font-color-contrast-med {
+        color: $font-color-dark-contrast-med !important;
+    }
+
+    .font-color-contrast-low {
+        color: $font-color-dark-contrast-low !important;
+    }
+
+    .primary-bg {
+        background-color: map-get($mat-primary, 500) !important;
+    }
+
+    .chip-glow {
+        box-shadow: 0 0 4px 0 map-get($mat-primary, 500);
+    }
+
+    mat-chip.mat-primary {
+        background-color: map-get($mat-primary, 500) !important;
+    }
+
+    .mat-bg-primary,
+    .topbar {
+        background: map-get($mat-primary, 500) !important;
+        color: #ffffff !important;
+    }
+    .mat-color-primary {
+        color: map-get($mat-primary, 500);
+    }
+
+    .mat-bg-accent {
+        background-color: map-get($mat-accent, 500);
+        color: black !important;
+    }
+    .mat-bg-warn {
+        background-color: #f44336 !important;
+        color: white;
+    }
+    .mat-color-accent {
+        color: map-get($mat-accent, 500);
+    }
+    .mat-color-warn {
+        color: #f44336;
+    }
+    .mat-color-default {
+        color: #ffffff;
+    }
+
+    .mat-snack-bar-container {
+        background: $bg-dark-strongest !important;
+        color: white !important;
+
+        button {
+            color: map-get($mat-accent, 500);
+        }
+    }
+
+    mat-card:not(.transparent),
+    mat-tree {
+        background: $bg-dark-strong;
+    }
+
+    mat-card,
+    .mat-card {
+        border-radius: 2px;
+    }
+
+    mat-chip {
+        &.mat-accent {
+            background: map-get($mat-accent, 500) !important;
+            color: $font-color-light-contrast-med !important;
+        }
+        &.mat-warn {
+            background: #f44336 !important;
+            color: $font-color-dark-contrast-med !important;
+        }
+    }
+
+    tc-header-top {
+        background: $bg-dark-strongest;
+        color: $font-color-dark-contrast-high;
+        display: block;
+
+        /* Nav buttons */
+        ul.menu li div {
+            height: 48px;
+
+            /* Active */
+            &.open {
+                border-bottom: 2px solid map-get($mat-primary, 500);
+            }
+        }
+    }
+
+    tc-dashboard {
+        mat-sidenav {
+            background: $bg-dark-strong !important;
+        }
+    }
+
+    hh-data-table cdk-table cdk-header-row {
+        background: $bg-dark-strong !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.33) !important;
+    }
+
+    hh-data-table cdk-table cdk-row {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+
+        &:hover {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6) !important;
+        }
+    }
+
+    .wrapper__single-system-header-fn {
+        background-image: $single-system-image-dark-fn;
+        background-position: right;
+        background-size: cover;
+        height: 320px;
+    }
+
+    .wrapper__single-system-header-tn {
+        background-image: $single-system-image-dark-tn;
+        background-position: right;
+        background-size: cover;
+        height: 320px;
+    }
+
+    .wrapper__system-card-fn {
+        background-image: $system-card-image-dark-fn !important;
+        background-size: cover !important;
+    }
+
+    .wrapper__system-card-tn {
+        background-image: $system-card-image-dark-tn !important;
+        background-size: cover !important;
+    }
+
+    .wrapper__system-card-external {
+        background-image: $system-card-image-dark-external !important;
+        background-size: cover !important;
+    }
+
+    .link {
+        color: map-get($mat-primary, 500) !important;
+        cursor: pointer;
+        text-decoration: underline;
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}

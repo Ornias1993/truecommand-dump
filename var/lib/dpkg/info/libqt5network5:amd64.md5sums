@@ -1,0 +1,7 @@
+7700f28ba7f040d7f55bd86afb81068d  usr/lib/x86_64-linux-gnu/libQt5Network.so.5.11.3
+6960a8233671fbe3b5e4b1caf8aaa16f  usr/lib/x86_64-linux-gnu/qt5/plugins/bearer/libqconnmanbearer.so
+a9c3a9aaafb9f05642441c8c6a52c133  usr/lib/x86_64-linux-gnu/qt5/plugins/bearer/libqgenericbearer.so
+1c0bb3603cd3223608d5a394064c33bd  usr/lib/x86_64-linux-gnu/qt5/plugins/bearer/libqnmbearer.so
+03e6c4b69775acd355958c732117ad1b  usr/share/doc/libqt5network5/changelog.Debian.gz
+c47cea380622a8c155fd8b0e35baa887  usr/share/doc/libqt5network5/copyright
+72f59c5e48ce4c57ed4654a566109ef8  usr/share/lintian/overrides/libqt5network5

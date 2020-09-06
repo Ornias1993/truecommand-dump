@@ -1,0 +1,4 @@
+/etc/apt/apt.conf.d/01autoremove-postgresql
+/etc/init.d/postgresql
+/etc/logrotate.d/postgresql-common
+/etc/sysctl.d/30-postgresql-shm.conf

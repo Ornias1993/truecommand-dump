@@ -1,0 +1,111 @@
+.topnav {	
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+	label.menu-toggle {
+		height: 48px;
+    width: 48px;
+    box-sizing: border-box;
+		padding: 12px;
+		border-radius: 50%;
+		.mat-icon {
+			font-size: 24px;
+		}
+	}
+	.toggle,
+	[id^=drop] {
+		display: none;
+	}
+	ul {
+		padding:0;
+		margin:0;
+		list-style: none;
+		position: relative;
+	}
+	ul:not(.menu) {
+		box-shadow: 0 0 4px rgba(0,0,0,0), 0 4px 8px rgba(0,0,0,.28);
+	}
+	ul.menu {
+		float: left;
+
+		> li {
+			float: left;
+			> div  {
+				> a,
+				> div {
+					border-bottom: 2px solid;
+					height: 48px;
+					box-sizing: border-box;
+					border-color: transparent;
+					margin: 0 6px;
+				}
+			}
+		}
+	}
+	ul li {
+		margin: 0px;
+		display: inline-block;
+	}
+	
+	a, label {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 13px 20px;
+		height: 44px;
+		font-size: .875rem;
+		text-decoration: none;
+		box-sizing: border-box;
+		.mat-icon {
+			font-size: 16px;
+			height: 20px;
+			line-height: 20px;
+			width: 20px;
+			margin-right: 2px;
+		}
+	}
+	ul li ul li:hover,
+	ul li ul li.open { 
+		background: #eeeeee; 
+	}
+
+	ul ul {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute; 
+		background: #ffffff;
+		color: rgba(0,0,0,.87);
+		/* has to be the same number as the "line-height" of "nav a" */
+		top: 48px; 
+		transform: translateY(-100px);
+		transition: all 0.3s ease-in-out;
+		z-index: -1;
+	}
+
+	ul li:hover > div > div > ul,
+	ul li:hover > div > ul {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	ul ul li {
+		width:170px;
+		float:none;
+		display:list-item;
+		position: relative;
+	}
+	ul ul ul {
+		top: 0;
+		left:170px; 
+	}
+	ul ul ul li {
+		position: relative;
+		top: 0;
+	}
+	
+	li > a:after { content:  ' +'; }
+	li > a:only-child:after { content: ''; }
+}

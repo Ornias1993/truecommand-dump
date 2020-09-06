@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/qt5
+/usr/lib/x86_64-linux-gnu/qt5/plugins
+/usr/lib/x86_64-linux-gnu/qt5/plugins/sqldrivers
+/usr/lib/x86_64-linux-gnu/qt5/plugins/sqldrivers/libqsqlpsql.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/libqt5sql5-psql
+/usr/share/doc/libqt5sql5-psql/changelog.Debian.gz
+/usr/share/doc/libqt5sql5-psql/copyright

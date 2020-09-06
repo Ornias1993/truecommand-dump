@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/krb5-config
+/usr/share/doc/krb5-config/NEWS.Debian.gz
+/usr/share/doc/krb5-config/README
+/usr/share/doc/krb5-config/changelog.gz
+/usr/share/doc/krb5-config/copyright
+/usr/share/doc/krb5-config/packaging-guidelines.gz
+/usr/share/kerberos-configs
+/usr/share/kerberos-configs/krb5.conf.template

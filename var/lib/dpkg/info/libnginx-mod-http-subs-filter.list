@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/nginx
+/usr/lib/nginx/modules
+/usr/lib/nginx/modules/ngx_http_subs_filter_module.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnginx-mod-http-subs-filter
+/usr/share/doc/libnginx-mod-http-subs-filter/changelog.Debian.gz
+/usr/share/doc/libnginx-mod-http-subs-filter/changelog.gz
+/usr/share/doc/libnginx-mod-http-subs-filter/copyright
+/usr/share/nginx
+/usr/share/nginx/modules-available
+/usr/share/nginx/modules-available/mod-http-subs-filter.conf

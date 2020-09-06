@@ -1,0 +1,57 @@
+#!/bin/sh
+
+set -e
+
+if [ remove = "$1" -o abort-install = "$1" -o disappear = "$1" ]; then
+    dpkg-divert --package postgresql-common --remove --rename --divert /usr/bin/pg_config.libpq-dev /usr/bin/pg_config
+fi
+
+if [ "$1" = purge ]; then
+    # remove socket directory
+    rm -rf /var/run/postgresql
+
+    # remove SSL keys
+    rm -rf /etc/postgresql-common/root.crt 
+
+    [ -d /etc/postgresql-common ] && rmdir --ignore-fail-on-non-empty /etc/postgresql-common || true
+
+    rm -rf /var/cache/postgresql
+
+    # unregister and remove files maintained by ucf
+    CCCONFIG="/etc/postgresql-common/createcluster.conf"
+    if which ucf >/dev/null; then
+	ucf --purge $CCCONFIG
+    fi
+    if which ucfr >/dev/null; then
+	ucfr --purge postgresql-common $CCCONFIG
+    fi
+    rm -f $CCCONFIG $CCCONFIG.ucf-*
+fi
+
+# Automatically added by dh_installinit/12.1.1
+if [ "$1" = "purge" ] ; then
+	update-rc.d postgresql remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_systemd_enable/12.1.1
+if [ "$1" = "remove" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper mask 'postgresql.service' >/dev/null || true
+	fi
+fi
+
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'postgresql.service' >/dev/null || true
+		deb-systemd-helper unmask 'postgresql.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installdebconf/12.1.1
+if [ "$1" = purge ] && [ -e /usr/share/debconf/confmodule ]; then
+	. /usr/share/debconf/confmodule
+	db_purge
+fi
+# End automatically added section
+
+

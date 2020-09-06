@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://localhost/docs/api/basics/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/cluster/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/events/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/timecodes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/ldap/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/reporting/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/cluster/db_backup/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/cluster/db_delete/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/cluster/db_list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/cluster/db_restore/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/data/current_stats/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/external/submit_alerts/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/external/submit_stats/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/reports/add/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/reports/edit/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/reports/generate/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/reports/list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/reports/list_templates/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/reports/remove/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/rpc/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/ssl/ca_import/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/ssl/ca_list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/ssl/ca_remove/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/ssl/cert_import/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/ssl/cert_info/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/ssl/cert_reset/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/list_config/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/reboot/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/reboot_stop/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/reboot_time/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/set_config/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/update_check/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/update_now/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/update_status/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/updates_available/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/upload_file/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/rpc/auth/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/rpc/auth_token/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/rpc/auth_clear/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/rpc/query/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/email/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/reports/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/add/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/edit/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/get_data/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/email/deleteconfig/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/email/editconfig/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/email/send_test/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/email/writeconfig/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/insert_data_value/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/insert_data/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/list_active/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/remove/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/users/set_data/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alerts/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/add/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alerts/add/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/uilogs/add/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/uilogs/clear/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/uilogs/list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alerts/edit/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/check_updates/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/search/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/test/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alerts/list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/change_settings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/current_settings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/remove/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alertplugins/update/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/alerts/remove/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/data/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/data/list_fields/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/data/curve_fit/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/data/retrieve/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/freenas/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/freenas/available_methods/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/freenas/send_method/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/license/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/license/check/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/license/info/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/license/register/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/logs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/logs/search/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/notices/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/uilogs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/notices/add_comment/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/notices/create_fake/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/notices/delete_comment/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/notices/delete/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/notices/list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/notices/set_resolved/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/add/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/current_stats/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/direct_auth/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/reconnect/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/update/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/edit/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/available/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/find_available/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/add_tokens/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/groups_add/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/groups_remove/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/groups_rename/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/remove_tokens/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/groups_replace/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/list_groups/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/list_tokens/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/list_writable/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/servers/remove/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/external/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/ssl/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/license/gettvuid/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/info/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/version_info/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/sys/middleware_log/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/teams/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/teams/add/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/teams/edit/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/teams/list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/api/teams/remove/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/404/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost/docs/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

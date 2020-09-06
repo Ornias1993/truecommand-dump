@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libkdb5.so.9.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libkdb5-9
+/usr/share/doc/libkdb5-9/NEWS.Debian.gz
+/usr/share/doc/libkdb5-9/changelog.Debian.gz
+/usr/share/doc/libkdb5-9/copyright
+/usr/lib/x86_64-linux-gnu/libkdb5.so.9

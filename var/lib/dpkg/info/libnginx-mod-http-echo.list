@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/nginx
+/usr/lib/nginx/modules
+/usr/lib/nginx/modules/ngx_http_echo_module.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnginx-mod-http-echo
+/usr/share/doc/libnginx-mod-http-echo/changelog.Debian.gz
+/usr/share/doc/libnginx-mod-http-echo/changelog.gz
+/usr/share/doc/libnginx-mod-http-echo/copyright
+/usr/share/nginx
+/usr/share/nginx/modules-available
+/usr/share/nginx/modules-available/mod-http-echo.conf

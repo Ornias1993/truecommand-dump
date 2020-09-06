@@ -1,0 +1,43 @@
+2020-09-06 13:03:01.950 UTC [27] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-09-06 13:03:01.950 UTC [27] LOG:  could not bind IPv6 address "::1": Cannot assign requested address
+2020-09-06 13:03:01.950 UTC [27] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-09-06 13:03:01.964 UTC [27] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2020-09-06 13:03:02.000 UTC [28] LOG:  database system was shut down at 2020-07-16 15:17:26 UTC
+2020-09-06 13:03:02.034 UTC [27] LOG:  database system is ready to accept connections
+2020-09-06 13:03:02.539 UTC [35] [unknown]@[unknown] LOG:  incomplete startup packet
+2020-09-06 13:03:07.178 UTC [27] LOG:  received fast shutdown request
+2020-09-06 13:03:07.193 UTC [27] LOG:  aborting any active transactions
+2020-09-06 13:03:07.195 UTC [27] LOG:  background worker "logical replication launcher" (PID 34) exited with exit code 1
+2020-09-06 13:03:07.195 UTC [29] LOG:  shutting down
+2020-09-06 13:03:07.249 UTC [27] LOG:  database system is shut down
+2020-09-06 13:03:07.904 UTC [79] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-09-06 13:03:07.904 UTC [79] LOG:  could not bind IPv6 address "::1": Cannot assign requested address
+2020-09-06 13:03:07.904 UTC [79] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-09-06 13:03:07.919 UTC [79] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2020-09-06 13:03:07.954 UTC [80] LOG:  database system was shut down at 2020-09-06 13:03:07 UTC
+2020-09-06 13:03:07.979 UTC [79] LOG:  database system is ready to accept connections
+2020-09-06 13:03:08.551 UTC [87] [unknown]@[unknown] LOG:  incomplete startup packet
+2020-09-06 13:03:10.173 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.173 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.215 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.215 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.251 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.251 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.275 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.275 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.310 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.310 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.338 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.338 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.371 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.371 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.408 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.408 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.469 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.469 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.493 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.493 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.521 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.521 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 
+2020-09-06 13:03:10.588 UTC [112] postgres@ixdb ERROR:  syntax error at end of input at character 9
+2020-09-06 13:03:10.588 UTC [112] postgres@ixdb STATEMENT:  EXECUTE 

@@ -1,0 +1,60 @@
+// General
+$transition-duration: 300ms !default;
+$gutter: 1rem !default;
+$transitionTiming: cubic-bezier(0.35, 0, 0.25, 1);
+$sidebarTrnTime: 0.3s;
+
+// Widths
+$sidebar-width: 15rem !default;
+$compact-sidebar-width: 48px !default;
+$compact-big-sidebar-width: 150px !default;
+
+// Typography
+$font-family-base: Roboto, 'Helvetica Neue', sans-serif !default;
+$font-size-base: 0.875rem !default;
+$font-weight-base: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 600 !default;
+
+$font-size-h1: 2.5rem !default;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.75rem !default;
+$font-size-h4: 1.5rem !default;
+$font-size-h5: 1.25rem !default;
+$font-size-h6: 1rem !default;
+
+$headings-margin-bottom: (1rem / 2) !default;
+$headings-font-family: inherit !default;
+$headings-font-weight: 400 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+
+$bg-dark-strongest: rgb(6, 6, 6);
+$bg-dark-stronger: rgb(42, 42, 42);
+$bg-dark-strong: rgb(60, 60, 60);
+
+$font-color-dark-contrast-high: rgb(255, 255, 255);
+$font-color-dark-contrast-med: rgba(255, 255, 255, 0.85);
+$font-color-dark-contrast-low: rgba(255, 255, 255, 0.65);
+$font-color-dark-contrast-lowest: rgba(255, 255, 255, 0.15);
+
+$single-system-image-dark-fn: url('/assets/images/FreeNAS_UI_Background_Photo_Image_Dark_Comp_1.png');
+$single-system-image-dark-tn: url('/assets/images/TrueNAS_UI_Background_Photo_Image_Dark_Comp_1.png');
+$system-card-image-dark-fn: url('/assets/images/FreeNAS_UI_Background_Photo_Image_Dark_Cropped.png');
+$system-card-image-dark-tn: url('/assets/images/TrueNAS_UI_Background_Photo_Image_Dark_Cropped.png');
+$system-card-image-dark-external: url('/assets/images/External_UI_Background_Photo_Image_Dark_Cropped.jpg');
+
+$bg-light-strongest: white;
+$bg-light-stronger: rgb(219, 222, 225);
+$bg-light-strong: rgb(249, 249, 250);
+
+$font-color-light-contrast-high: black;
+$font-color-light-contrast-med: rgba(0, 0, 0, 0.85);
+$font-color-light-contrast-low: rgba(0, 0, 0, 0.65);
+$font-color-light-contrast-lowest: rgba(0, 0, 0, 0.15);
+
+$single-system-image-light-fn: url('/assets/images/FreeNAS_UI_Background_Photo_Image_Light_Comp_1.png');
+$single-system-image-light-tn: url('/assets/images/TrueNAS_UI_Background_Photo_Image_Light_Comp_1.png');
+$system-card-image-light-fn: url('/assets/images/FreeNAS_UI_Background_Photo_Image_Light_Cropped.png');
+$system-card-image-light-tn: url('/assets/images/TrueNAS_UI_Background_Photo_Image_Light_Cropped.png');
+$system-card-image-light-external: url('/assets/images/External_UI_Background_Photo_Image_Light_Cropped.jpg');

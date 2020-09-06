@@ -1,0 +1,165 @@
+#!/bin/sh
+
+set -e
+[ "$DPKG_MAINTSCRIPT_PACKAGE" ] && . /usr/share/debconf/confmodule
+
+SSL_ROOT=/etc/postgresql-common/root.crt
+
+setup_createclusterconf ()
+{
+    [ "$DPKG_MAINTSCRIPT_PACKAGE" ] || return 0
+    db_get postgresql-common/ssl
+    case $RET in
+        true) SSL=on ;;
+        false) SSL=off ;;
+        *) return ;;
+    esac
+
+    CCTEMPLATE="/usr/share/postgresql-common/createcluster.conf"
+    CCTMP=`mktemp --tmpdir postgresql-common.XXXXXX`
+    trap "rm -f $CCTMP" 0 2 3 15
+    sed -e "s/^ssl =.*/ssl = $SSL/" $CCTEMPLATE > $CCTMP
+    chmod 644 $CCTMP
+    CCCONFIG="/etc/postgresql-common/createcluster.conf"
+    ucf --debconf-ok $CCTMP $CCCONFIG
+    ucfr postgresql-common $CCCONFIG
+    rm -f $CCTMP
+}
+
+if [ "$1" = configure ]; then
+    [ "$DPKG_MAINTSCRIPT_PACKAGE" ] && quiet="--quiet" # RedHat doesn't have this
+    # Make sure the administrative user exists
+    if ! getent passwd postgres > /dev/null; then
+        adduser --system $quiet --home /var/lib/postgresql --no-create-home \
+            --shell /bin/bash --group --gecos "PostgreSQL administrator" postgres
+    fi
+    # if the user was created manually, make sure the group is there as well
+    if ! getent group postgres > /dev/null; then
+        addgroup --system $quiet postgres
+    fi
+    # make sure postgres is in the postgres group
+    if ! id -Gn postgres | grep -qw postgres; then
+        adduser $quiet postgres postgres
+    fi
+
+    # check validity of postgres user and group
+    if [ "`id -u postgres`" -eq 0 ]; then
+        echo "The postgres system user must not have uid 0 (root).
+Please fix this and reinstall this package." >&2
+        exit 1
+    fi
+    if [ "`id -g postgres`" -eq 0 ]; then
+        echo "The postgres system user must not have root as primary group.
+Please fix this and reinstall this package." >&2
+        exit 1
+    fi
+
+    # ensure home directory ownership
+    mkdir -p /var/lib/postgresql
+    su -s /bin/sh postgres -c "test -O /var/lib/postgresql &&
+            test -G /var/lib/postgresql" || \
+        chown postgres:postgres /var/lib/postgresql
+
+    # config directory permissions
+    chown postgres:postgres /etc/postgresql
+
+    # nicer log directory permissions
+    mkdir -p /var/log/postgresql
+    chmod 1775 /var/log/postgresql
+    chown root:postgres /var/log/postgresql
+
+    # create socket directory
+    [ -d /var/run/postgresql ] || \
+       install -d -m 2775 -o postgres -g postgres /var/run/postgresql
+
+    # create default dummy root.crt if not present
+    if ! [ -e "$SSL_ROOT" ]; then
+        cat > "$SSL_ROOT" <<EOF
+This is a dummy root certificate file for PostgreSQL. To enable client side
+authentication, add some certificates to it. Client certificates must be signed
+with any certificate in this file to be accepted.
+
+A reasonable choice is to just symlink this file to
+/etc/ssl/certs/ssl-cert-snakeoil.pem; in this case, client certificates need to
+be signed by the postgresql server certificate, which might be desirable in
+many cases. See chapter "Server Setup and Operation" in the PostgreSQL
+documentation for details (in package postgresql-doc-9.2).
+
+  file:///usr/share/doc/postgresql-doc-9.2/html/ssl-tcp.html
+EOF
+    fi
+
+    # Add postgres user to the ssl-cert group on fresh installs
+    if [ -z "$2" ]; then
+	if getent group ssl-cert >/dev/null; then
+	    adduser $quiet postgres ssl-cert
+	fi
+    fi
+
+    if [ "$2" ]; then
+        /usr/share/postgresql-common/run-upgrade-scripts "$2" || true
+    fi
+
+    /usr/share/postgresql-common/pg_checksystem || true
+
+    # Create createcluster.conf from debconf
+    setup_createclusterconf
+
+    # Forget about ucf logrotate config handling
+    if dpkg --compare-versions "$2" lt 183~; then
+        LRCONFIG="/etc/logrotate.d/postgresql-common"
+        ucf --purge $LRCONFIG
+        ucfr --purge postgresql-common $LRCONFIG
+    fi
+
+    # Create tsearch dictionaries on first install
+    if [ -z "$2" ]; then
+        pg_updatedicts
+    fi
+fi
+
+if [ "$1" = triggered ]; then
+    pg_updatedicts || true
+    db_stop
+    exit 0  # skip daemon restart below
+fi
+
+[ "$DPKG_MAINTSCRIPT_PACKAGE" ] && db_stop
+
+# Automatically added by dh_systemd_enable/12.1.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# This will only remove masks created by d-s-h on package removal.
+	deb-systemd-helper unmask 'postgresql.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'postgresql.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'postgresql.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'postgresql.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit/12.1.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# In case this system is running systemd, we need to ensure that all
+	# necessary tmpfiles (if any) are created before starting.
+	if [ -d /run/systemd/system ] ; then
+		systemd-tmpfiles --create postgresql.conf >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit/12.1.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -x "/etc/init.d/postgresql" ]; then
+		update-rc.d postgresql defaults 19 21 >/dev/null
+		invoke-rc.d postgresql start || exit 1
+	fi
+fi
+# End automatically added section
+
+
+exit 0

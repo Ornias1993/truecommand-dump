@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/nginx
+/usr/lib/nginx/modules
+/usr/lib/nginx/modules/ngx_http_dav_ext_module.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnginx-mod-http-dav-ext
+/usr/share/doc/libnginx-mod-http-dav-ext/changelog.Debian.gz
+/usr/share/doc/libnginx-mod-http-dav-ext/changelog.gz
+/usr/share/doc/libnginx-mod-http-dav-ext/copyright
+/usr/share/nginx
+/usr/share/nginx/modules-available
+/usr/share/nginx/modules-available/mod-http-dav-ext.conf

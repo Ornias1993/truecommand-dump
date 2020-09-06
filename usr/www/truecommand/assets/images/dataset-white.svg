@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 191 184" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-34.5,-16.5)">
+        <path id="corcht" d="M187,200L225,200L225,17L187,17L187,31L208,31L208,186L187,186L187,200Z" style="fill:rgb(252,252,252);fill-rule:nonzero;stroke:rgb(252,252,252);stroke-width:1px;"/>
+        <g id="use5" transform="matrix(-1,0,0,1,260,0)">
+            <path d="M187,200L225,200L225,17L187,17L187,31L208,31L208,186L187,186L187,200Z" style="fill:rgb(252,252,252);fill-rule:nonzero;stroke:rgb(252,252,252);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(0.824561,0,0,1,22.807,20.5)">
+            <rect x="73" y="33" width="114" height="9" style="fill:rgb(252,252,252);stroke:rgb(252,252,252);stroke-width:1.09px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.824561,0,0,1,22.807,54.5)">
+            <rect x="73" y="33" width="114" height="9" style="fill:rgb(252,252,252);stroke:rgb(252,252,252);stroke-width:1.09px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.824561,0,0,1,22.807,88.5)">
+            <rect x="73" y="33" width="114" height="9" style="fill:rgb(252,252,252);stroke:rgb(252,252,252);stroke-width:1.09px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.824561,0,0,1,22.807,122.5)">
+            <rect x="73" y="33" width="114" height="9" style="fill:rgb(252,252,252);stroke:rgb(252,252,252);stroke-width:1.09px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+        </g>
+    </g>
+</svg>

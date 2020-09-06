@@ -1,0 +1,38 @@
+/*---- Session (Sign in, sign up, forgot, lockscreen) -----*/
+.page-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.session-progress {
+  position: relative;
+  bottom: -5px;
+  z-index: 9999;
+}
+.session-form-hold {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1px;
+  padding: 24px;
+  position: relative;
+  width: 388px;
+  z-index: 1;
+}
+.session-form-hold > .mat-card {
+  margin: 0;    
+}
+.session-lockscreen {
+  max-width: 320px;
+}
+.lockscreen-user {
+  text-align: center;
+  margin-bottom: 1rem;
+  display: flow-root;
+  overflow: hidden;
+}
+.lockscreen-face {
+  max-width: 72px;
+  max-height: 72px;
+  border-radius: 50%;
+  margin-bottom: .5rem;
+}

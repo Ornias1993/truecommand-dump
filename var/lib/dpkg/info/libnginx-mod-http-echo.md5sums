@@ -1,0 +1,5 @@
+c0b326b18004552f1aa7e1c47c2181ed  usr/lib/nginx/modules/ngx_http_echo_module.so
+7680599a4ac8ba937aa7fd0992cfc26a  usr/share/doc/libnginx-mod-http-echo/changelog.Debian.gz
+11f2b9048392b278abeec7521347a418  usr/share/doc/libnginx-mod-http-echo/changelog.gz
+f89bef9fa1d22af419e5154ad3966930  usr/share/doc/libnginx-mod-http-echo/copyright
+f9b09049727afb83eb80cac2099a7501  usr/share/nginx/modules-available/mod-http-echo.conf
